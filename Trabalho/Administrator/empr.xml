@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Dados do utilizadores que requisitaram o livro-->
+<Requisições>
+  <Requisão contador="1">
+    <Utilizador IDLogin="admin">Helder Menezes</Utilizador>
+    <Título>jQuery: A sua Biblioteca JavaScript (2.ª Edição Atualizada)</Título>
+    <Autor>Luís Soares</Autor>
+    <Editora>Bertrand</Editora>
+    <Data_de_empréstimo>26-11-2014</Data_de_empréstimo>
+    <Data_de_devolução>01-12-2014</Data_de_devolução>
+    <Descrição>O jQuery é uma biblioteca JavaScript de referência que veio revolucionar a forma de programar em JavaScript e, consequentemente, o desenvolvimento de interfaces gráficas do utilizador (GUI) de sites e aplicações web. Open source e fácil de aprender, o jQuery é hoje uma importante e versátil ferramenta para os profissionais da área, apoiando em manipulações DOM, gestão de estilos, criação de animações, invocações Ajax, entre outros aspetos.</Descrição>
+  </Requisão>
+  <Requisão contador="2">
+    <Utilizador IDLogin="admin">Helder Menezes</Utilizador>
+    <Título>Android™ – Introdução ao Desenvolvimento de Aplicações</Título>
+    <Autor>Ricardo Queirós</Autor>
+    <Editora>Bertrand</Editora>
+    <Data_de_empréstimo>26-11-2014</Data_de_empréstimo>
+    <Data_de_devolução>01-12-2014</Data_de_devolução>
+    <Descrição>O AndroidTM é um sistema operativo para dispositivos móveis desenvolvido pela Open Handset Alliance, liderada pela Google. O mercado móvel apresentou em 2012 uma grande hegemonia dos dispositivos Android, com mais de metade da quota de mercado na venda de dispositivos móveis. A Google Play, loja online de aplicações Android, registou mais de 800 mil aplicações e mais de 30 biliões de downloads foram feitos até à data entre aplicações pagas e gratuitas.</Descrição>
+  </Requisão>
+  <Requisão contador="3">
+    <Utilizador IDLogin="admin">Helder Menezes</Utilizador>
+    <Título>ASP.NET 4.5 – Curso Completo</Título>
+    <Autor>Luís Abreu</Autor>
+    <Editora>Bertrand</Editora>
+    <Data_de_empréstimo>26-11-2014</Data_de_empréstimo>
+    <Data_de_devolução>01-12-2014</Data_de_devolução>
+    <Descrição>Este livro, com vários exemplos práticos, apresenta as principais características relacionadas com a construção de aplicações Web através da plataforma da Microsoft, ASP.NET 4.5. Inicia com a apresentação da framework que serve de suporte ao desenvolvimento de páginas (Web Forms e ASP.NET Server Controls simples) e introduz gradualmente todas as novas funcionalidades disponibilizadas pelas últimas versões da plataforma.</Descrição>
+  </Requisão>
+  <Requisão contador="4">
+    <Utilizador IDLogin="admin">Helder Menezes</Utilizador>
+    <Título>ASP.NET MVC</Título>
+    <Autor>Luís Abreu</Autor>
+    <Editora>FCA</Editora>
+    <Data_de_empréstimo>28-11-2014</Data_de_empréstimo>
+    <Data_de_devolução>03-12-2014</Data_de_devolução>
+    <Descrição>A explosão da Web nos últimos anos potenciou a introdução de plataformas que simplificam as tarefas de desenvolvimento das aplicações. Foi neste cenário que o padrão MVC voltou a ganhar vida, fazendo com que a Microsoft apostasse no lançamento de uma nova plataforma, designada por ASP.NET MVC, que foi desenvolvida a pensar na separação de responsabilidades e na construção de aplicações facilmente testadas.</Descrição>
+  </Requisão>
+  <Requisão contador="5">
+    <Utilizador IDLogin="user1">User teste</Utilizador>
+    <Título>Projetos de POO em JAVA</Título>
+    <Autor>F.Mario Martins</Autor>
+    <Editora>FCA</Editora>
+    <Data_de_empréstimo>05-12-2014</Data_de_empréstimo>
+    <Data_de_devolução>10-12-2014</Data_de_devolução>
+    <Descrição>Este livro tem por objetivo, com base em princípios fundamentais da Engenharia de Software, apresentar regras e boas práticas na análise, conceção e desenvolvimento (projeto) de aplicações orientadas pelos objetos em geral, neste caso usando as construções da linguagem Java. </Descrição>
+  </Requisão>
+  <Requisão contador="6">
+    <Utilizador IDLogin="user1">User teste</Utilizador>
+    <Título>ASP.NET 4.5.1: One ASP.NET, OWIN, Identity, MVC, Web API e SignalR</Título>
+    <Autor>Luís Abreu</Autor>
+    <Editora>FCA</Editora>
+    <Data_de_empréstimo>05-12-2014</Data_de_empréstimo>
+    <Data_de_devolução>10-12-2014</Data_de_devolução>
+    <Descrição>A plataforma ASP.NET é usada por muitos programadores que necessitam de criar aplicações Web dinâmicas e ricas. Com o passar dos anos, a plataforma passou a disponibilizar cada vez mais funcionalidades e abordagens diferentes que podiam ser aplicadas na construção de aplicações Web. Para além disso, os ciclos de iteração têm sido cada vez mais rápidos, o que, muitas vezes, dificulta a vida dos programadores, que tentam acompanhar todas as novidades de cada uma das novas versões.</Descrição>
+  </Requisão>
+  <Requisão contador="7">
+    <Utilizador IDLogin="user1">User teste</Utilizador>
+    <Título>DREAMWEAVER CS5.5 &amp; CS5 - Curso Completo	</Título>
+    <Autor>Hélder Oliveira</Autor>
+    <Editora>Bertrand</Editora>
+    <Data_de_empréstimo>05-12-2014</Data_de_empréstimo>
+    <Data_de_devolução>10-12-2014</Data_de_devolução>
+    <Descrição>O Dreamweaver é um programa de criação e edição de sites líder no seu segmento que fornece recursos a nível visual e de código para criar sites baseados em padrões e designs para desktops, dispositivos móveis (nomeadamente, plataformas Android e iOS), tablets, entre outros. A actual versão é compatível com o HTML5 e as folhas de estilos CSS3.
+
+Este livro tem como objectivo fazer com que o leitor aprenda a utilizar os recursos do Dreamweaver nas versões CS5.5 e CS5, nomeadamente textos, tabelas, divs, imagens, folhas de estilos (CSS), frames, formulários, behaviors, entre outros, no desenvolvimento de sites profissionais estáticos e dinâmicos com ligações a bases de dados. Entre as tecnologias abordadas, destaca-se o PHP e o ASP, e, num capítulo introdutório, a linguagem SQL.</Descrição>
+  </Requisão>
+</Requisições>

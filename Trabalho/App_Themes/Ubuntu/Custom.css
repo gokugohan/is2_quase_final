@@ -1,0 +1,108 @@
+﻿body {
+    background-color:rgba(94,39,80,0.50);
+}
+
+
+#BodyContentContainer{
+            width:100%;
+            margin:0px;
+            margin-top:65px;
+            /*background-color:rgba(94,39,80,0.50);*/
+            
+}
+
+#divMainContent{
+    /*background-color:rgba(94,39,80,0.50);*/
+    border-radius:10px;
+    border:1px dotted;
+    min-height:25%;
+    max-height:100%;
+    height:75%;
+}
+
+#LoginStatus-name{
+    line-height: 20px;
+    position: relative;  display: block;  
+    padding: 15px 15px;
+}
+
+#LoginStatus-name>a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+#LoginStatus-name>span{
+    color:#ffffff;
+}
+
+#LoginStatus-name:hover{
+    background-color:#97310E;
+}
+
+
+ #animWrapper{
+    display:none;
+}
+
+
+#UpdatePanel1{
+    position:fixed;
+    bottom:1px;
+    left:1px;
+    background-color:transparent;
+}
+
+/* Login - Access denied anim */
+.blink{
+    display: inline;
+    font-family: cursive;
+    font-size: 100px;
+    color:red;
+    -webkit-animation-duration:0.1s;
+    -moz-animation-duration:0.1s;
+    animation-duration:0.1s;
+    -webkit-animation-name:blink;
+    -moz-animation-name:blink;
+    animation-name:blink;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-direction:alternate;
+    -moz-animation-direction:alternate;
+    animation-direction:alternate;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes blink {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1.2,1.2); 
+        -webkit-transition-duration: 500ms;
+        -webkit-transition-timing-function: ease-in-out;
+        /* Webkit for Mozila Firefox */
+        -moz-transform: scale(1.2, 1.2);
+        -moz-transition-duration: 500ms;
+        -moz-transition-timing-function: ease-out;
+ 
+        /* Webkit for IE( Version: 11, 10 ) */
+        -ms-transform: scale(1.20, 1.20);
+        -ms-transition-duration: 500ms;
+        -ms-transition-timing-function: ease-out;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(1, 1);
+        -webkit-transition-duration: 500ms;
+        -webkit-transition-timing-function: ease-in-out;
+        /* Webkit for Mozila Firefox */
+        -moz-transform: scale(1, 1);
+        -moz-transition-duration: 500ms;
+        -moz-transition-timing-function: ease-out;
+ 
+        /* Webkit for IE( Version: 11, 10 ) */
+        -ms-transform: scale(1, 1);
+        -ms-transition-duration: 500ms;
+        -ms-transition-timing-function: ease-out;
+    }
+}
