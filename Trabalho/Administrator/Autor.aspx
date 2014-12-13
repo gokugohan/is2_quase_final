@@ -9,7 +9,9 @@
                 <div class="panel-body">
                    <asp:UpdatePanel runat="server" UpdateMode="Conditional">
                        <ContentTemplate>
-                           
+                           <!--
+                            Data-boud -  adicionar texbox para efeito de pesquisa
+                               -->
                            <asp:GridView ID="GridViewAutor" 
                                CssClass="table table-hover table-bordered table-condensed" 
                                runat="server" 
@@ -18,7 +20,7 @@
                                DataSourceID="SqlDataSource1" 
                                AllowSorting="True"
                                OnDataBound="OnDataBound"
-                               AllowPaging="True">
+                               AllowPaging="false">
                                <Columns>
                                    <asp:TemplateField ShowHeader="true">
                                        <EditItemTemplate>
@@ -128,7 +130,28 @@
                 </div>
             </div>
             
-          
+            
+            <div class="panel panel-green">
+                <div class="panel panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>Importar autor(.xml)</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <asp:FileUpload ID="FileUpload1" CssClass="form-control" runat="server" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="btnImportar" runat="server" OnClick="btnImportar_Click" CssClass="btn btn-default" Text="Importar" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                </div>
+            </div>
+            
 
         </div>
     </div>

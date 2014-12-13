@@ -18,6 +18,12 @@
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ControlToValidate="tbNomeCompleto" ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ErrorMessage="Campo obrigatório">Campo obrigatório</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator
+                                ID="RegularExpressionValidator2" runat="server"
+                                ControlToValidate="tbNomeCompleto"
+                                ValidationExpression="^[a-zA-Z\s]*$"
+                                ForeColor="Red"
+                                ErrorMessage="Nome inválido"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -29,6 +35,12 @@
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ControlToValidate="tbEmail" ID="RequiredFieldValidator2" ForeColor="Red" runat="server" ErrorMessage="CampoObrigatório">Campo obrigatório</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4"
+                                runat="server" ErrorMessage="Email inválido"
+                                ControlToValidate="tbEmail"
+                                ForeColor="Red"
+                                ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                            </asp:RegularExpressionValidator>
                 </td>
             </tr>
 

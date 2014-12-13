@@ -13,3 +13,14 @@ Default skin template. The following skins are provided as examples only.
 
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
 --%>
+
+<asp:HyperLink
+    SkinId="SkinDownloadLink"
+    runat="server" 
+    CssClass="btn btn-link pull-right" />
+
+<asp:Button 
+    SkinId="SkinGerarXml"
+    CssClass="btn btn-link"
+    runat="server"
+    />

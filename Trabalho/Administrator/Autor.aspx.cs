@@ -5,11 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.IO;
+using System.Xml.Linq;
+using System.Xml;
+using System.Data.Entity.Validation;
 
 public partial class Administrator_AdminAutor : System.Web.UI.Page
 {
     
     private string mBaseUrl;
+    private string mFileName;
+    private string mDestinationFolder;
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         mBaseUrl = Request.Url.GetLeftPart(UriPartial.Authority);
@@ -61,5 +68,79 @@ public partial class Administrator_AdminAutor : System.Web.UI.Page
             GridViewAutor.HeaderRow.Parent.Controls.AddAt(0, row);
 
         }
+    }
+    protected void btnImportar_Click(object sender, EventArgs e)
+    {
+        String horaUpload = (DateTime.Now.Year + "" + DateTime.Now.Month + "" + DateTime.Now.Day+"_"+
+            DateTime.Now.Hour+""+DateTime.Now.Minute+""+DateTime.Now.Second);
+
+        if (FileUpload1.HasFile)
+        {
+            
+            string ext = System.IO.Path.GetExtension(FileUpload1.FileName);
+            Label4.Text = ext;
+            if (ext.ToLower() == ".xml")
+            {
+                mFileName = FileUpload1.FileName;
+                mDestinationFolder = Server.MapPath("~/Uploads/" + mFileName);
+
+                bool uploadSucesso = false;
+                try
+                {
+                    FileUpload1.SaveAs(mDestinationFolder);
+                    uploadSucesso = true;
+                }
+                catch (Exception ex)
+                {
+                    uploadSucesso = false;
+                    Label4.Text = ex.Message;
+
+                }
+
+                if (uploadSucesso)
+                {
+                    //Processar XML
+                    Label4.Text += "<br> Upload sucessfully!";
+
+                    XDocument xDocument = XDocument.Load(mDestinationFolder);
+                    IEnumerable<XElement> autores = xDocument.Root.Elements();
+                    
+                    using (var entidade = new BibliotecaEntity())
+                    {
+                        foreach (var autor in autores)
+                        {
+                            Autor mAutor = new Autor();
+                            mAutor.Nome = autor.Element("nome").Value;
+                            mAutor.Apelido = autor.Element("apelido").Value;
+                            entidade.Autores.Add(mAutor);
+                            
+                        }
+                        try
+                        {
+                            entidade.SaveChanges();
+                            Response.Redirect("Autor");
+                        }
+                        catch (DbEntityValidationException dbe)
+                        {
+                            Label4.Text = dbe.Message;
+                        }
+                       
+                    }
+                    
+                    
+                }
+                
+                
+            }
+            else
+            {
+                Label4.Text = "O ficheiro importado é incorreto";
+            }
+        }
+        else
+        {
+            Label4.Text = "Ainda não importar nenhum ficheiro!";
+        }
+        //Response.Redirect("Autor");
     }
 }

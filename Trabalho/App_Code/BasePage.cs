@@ -8,7 +8,7 @@ using System.Web;
 /// </summary>
 public class BasePage:System.Web.UI.Page
 {
-
+    //Tirado da aula - IS2
     private void Page_PreRender(object sender, EventArgs e)
     {
         if (string.IsNullOrEmpty(this.Title) || this.Title.Equals("Untitled Page", StringComparison.CurrentCultureIgnoreCase))

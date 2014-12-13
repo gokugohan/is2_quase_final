@@ -5,3 +5,8 @@
 #logout_icon_status>a{
     margin-left:3px;
 }
+
+#Menu1 ul.static{
+    margin-left:10%;
+    font-size:120%;
+}

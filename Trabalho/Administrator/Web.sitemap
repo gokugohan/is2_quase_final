@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="../Admin" title="Home"  description="Admin Home page">
+        <siteMapNode url="../Autor" title="Autor"  description="Página autor" />
+        <siteMapNode url="../Editora" title="Editora"  description="Página editora" />
+        <siteMapNode url="../Categoria" title="Categoria"  description="Página categoria" />
+        <siteMapNode url="../Livro" title="Livro"  description="Página livro" />
+      <siteMapNode url="../Utilizadores" title="Utilizadores" description="Página utilizadores"/>
+    </siteMapNode>
+</siteMap>

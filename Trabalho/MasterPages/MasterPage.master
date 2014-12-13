@@ -27,28 +27,9 @@
         <Menu:MenuUbuntu runat="server" ID="MenuUbuntu" />
         
             <div class="container container-full" id="BodyContentContainer" runat="server">
-                <%--<div class="col-md-2" id="divTreeViewMenu">
-
-                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="Arrows">
-                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD"></HoverNodeStyle>
-                        <NodeStyle HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black"></NodeStyle>
-
-                        <ParentNodeStyle Font-Bold="False"></ParentNodeStyle>
-
-                        <SelectedNodeStyle HorizontalPadding="0px" VerticalPadding="0px" Font-Underline="True" ForeColor="#5555DD"></SelectedNodeStyle>
-                    </asp:TreeView>
-                    <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>
-                    
-                    <br />
-                    <br />
-                    <br />
-                </div>
-                <br />--%>
-                
                 <div class="col-md-10 col-lg-10" id="divMainContent">
                     <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
                     <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
-                        
                     </asp:ContentPlaceHolder>
                 </div>
                 <div class="col-md-2 col-lg-2" id="divAddsAndThemeSelector">

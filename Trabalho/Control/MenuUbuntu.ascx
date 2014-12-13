@@ -1,6 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MenuUbuntu.ascx.cs" Inherits="Control_MenuUbuntu" %>
 <nav id="myNavbar" runat="server" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -11,12 +10,14 @@
             </button>
             <a class="navbar-brand" href="../">Trabalho I - IS2</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
+            
+             <ul class="nav navbar-nav">
+                
                 <li>
                     <asp:HyperLink ID="HomeLink" NavigateUrl="../" runat="server">Home</asp:HyperLink>
                 </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Biblioteca <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -47,6 +48,8 @@
                     
                 </li>
             </ul>
+            
         </div>
     </div>
 </nav>
+

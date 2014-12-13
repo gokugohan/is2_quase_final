@@ -1,6 +1,17 @@
 ﻿<%@ Page Title="Gerir livro" Theme="Admin" Language="C#" MasterPageFile="~/Administrator/Admin.master" AutoEventWireup="true" CodeFile="Livro.aspx.cs" Inherits="Administrator_Livro_Default" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
+    <script src="../Scripts/epoch_classes.js"></script>
+    <script>
+        /*
+            http://www.javascriptkit.com/script/script2/epoch/index.shtml
+        */
+        var dp_cal;
+        window.onload = function () {
+            dp_cal = new Epoch('epoch_popup', 'popup', document.getElementById('ContentPlaceHolder1_DetailsView1_TextBox2'));
+            var tmp = document.getElementById("ContentPlaceHolder1_DetailsView1_TextBox2");
+            console.log(tmp);
+        };
+    </script>
     <div class="row">
         <div class="col-md-9 col-lg-9">
             <asp:Panel ID="PanelFormLivro" runat="server">
@@ -25,7 +36,17 @@
                                     <asp:TemplateField HeaderText="ISBN" SortExpression="ISBN">
                                         
                                         <InsertItemTemplate>
-                                            <asp:TextBox runat="server" CssClass="form-control" Text='<%# Bind("ISBN") %>' ID="TextBox5"></asp:TextBox>
+                                            <asp:TextBox runat="server" 
+                                                CssClass="form-control" 
+                                                placeholder="ddd-ddd-ddd-ddd-d"
+                                                Text='<%# Bind("ISBN") %>' ID="TextBox5"></asp:TextBox>
+                                            <asp:RegularExpressionValidator 
+                                                ID="RegularExpressionValidator1" 
+                                                runat="server" 
+                                                ControlToValidate="TextBox5"
+                                                ValidationExpression="\d{3}-\d{3}-\d{3}-\d{3}-[0-9]{1}"
+                                                ForeColor="Red"
+                                                ErrorMessage="Inválido"></asp:RegularExpressionValidator>
                                         </InsertItemTemplate>
                                        
                                     </asp:TemplateField>
@@ -35,13 +56,24 @@
                                         <InsertItemTemplate>
                                             <asp:TextBox runat="server" CssClass="form-control" Text='<%# Bind("Titulo") %>' 
                                                 ID="TextBox1"></asp:TextBox>
+
                                         </InsertItemTemplate>
                                        
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Data_Publicacao" SortExpression="Data_Publicacao">
+                                    <asp:TemplateField HeaderText="Data Publicação" SortExpression="Data_Publicacao">
                                        
                                         <InsertItemTemplate>
-                                            <asp:TextBox runat="server" CssClass="form-control" placeholder="dd-mm-yyyy" Text='<%# Bind("Data_Publicacao") %>' ID="TextBox2"></asp:TextBox>
+
+                                            <asp:TextBox runat="server"  CssClass="form-control" placeholder="DD/MM/YYYY" Text='<%# Bind("Data_Publicacao") %>' ID="TextBox2"></asp:TextBox>
+                                            
+                                            <%--http://regexlib.com/DisplayPatterns.aspx?cattabindex=4&categoryId=5&AspxAutoDetectCookieSupport=1--%>
+                                            <asp:RegularExpressionValidator 
+                                                ID="RegularExpressionValidator2" 
+                                                runat="server" 
+                                                ControlToValidate="TextBox2"
+                                                ForeColor="Red"
+                                                ValidationExpression="^((0?[13578]|10|12)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[01]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1}))|(0?[2469]|11)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[0]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1})))$"
+                                                ErrorMessage="Data inválida"></asp:RegularExpressionValidator>
                                         </InsertItemTemplate>
                                         
                                     </asp:TemplateField>

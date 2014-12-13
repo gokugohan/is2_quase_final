@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<autores>
+	<autor>
+		<nome>autor1</nome> 
+		<apelido>apelido1</apelido>
+	</autor>
+	<autor>
+		<nome>autor2</nome> 
+		<apelido>apelido2</apelido>
+	</autor>
+	<autor>
+		<nome>autor3</nome> 
+		<apelido>apelido3</apelido>
+	</autor>
+	<autor>
+		<nome>autor4</nome> 
+		<apelido>apelido4</apelido>
+	</autor>
+</autores>

@@ -95,7 +95,7 @@
                             <i class="fa fa-long-arrow-right"></i>
                             <asp:Button ID="btnGenerateXML"
                                 OnClick="btnGenerateXML_Click"
-                                CssClass="btn btn-link"
+                                SkinID="SkinGerarXml"
                                 runat="server"
                                 Text="Gerar o XML dos livros emprestados" />
                             <i class="fa fa-long-arrow-left"></i>
@@ -107,7 +107,12 @@
                                 runat="server">Mostrar resultado gerado</asp:HyperLink>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <asp:HyperLink ID="btnDownload" runat="server" OnClick="btnDownload_Click" NavigateUrl="~/Administrator/empr.xml" CssClass="btn btn-link pull-right" Text="Mostrar resultado" />
+                            <asp:HyperLink ID="btnDownload" 
+                                runat="server" 
+                                OnClick="btnDownload_Click" 
+                                NavigateUrl="~/Administrator/empr.xml" 
+                                SkinID="SkinDownloadLink"
+                                Text="Mostrar resultado" />
                         </div>
                     </div>
                     
