@@ -51,4 +51,28 @@
     <AlternateText>Intituto Politécnico de Santarém</AlternateText>
 
   </Ad>
+  <Ad>
+      <ImageUrl>/Images/07.jpg</ImageUrl>
+      <NavigateUrl> http://www.santaremdigital.com/ </NavigateUrl>
+      <AlternateText>Sé de Santarém</AlternateText>
+
+    </Ad>
+  <Ad>
+      <ImageUrl>/Images/08.jpg</ImageUrl>
+      <NavigateUrl> http://www.santaremdigital.com/ </NavigateUrl>
+      <AlternateText>Salgueiro Maia</AlternateText>
+
+    </Ad>
+<Ad>
+    <ImageUrl>/Images/09.jpg</ImageUrl>
+    <NavigateUrl> http://www.santaremdigital.com/ </NavigateUrl>
+    <AlternateText>Ponte de Santarém</AlternateText>
+
+  </Ad>
+<Ad>
+    <ImageUrl>/Images/10.jpg</ImageUrl>
+    <NavigateUrl> http://www.santaremhotel.net/ </NavigateUrl>
+    <AlternateText>Hotel Santarém</AlternateText>
+
+  </Ad>
 </Advertisements>

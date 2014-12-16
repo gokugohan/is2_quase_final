@@ -133,7 +133,7 @@
         <div class="col-md-4 col-lg-4">
             <div class="panel panel-green">
                 <div class="panel panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>Importar dados do autor</h3>
+                    <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>Importar dados do editora</h3>
                 </div>
                 <div class="panel-body">
                     <asp:FileUpload ID="FileUpload1" 

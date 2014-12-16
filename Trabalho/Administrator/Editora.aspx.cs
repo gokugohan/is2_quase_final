@@ -99,11 +99,30 @@ public partial class Administrator_Editora_Default : System.Web.UI.Page
 
                         if (temp.Length == 2)
                         {
-                            Editora editora = new Editora();
-                            editora.Nome = temp[0];
-                            editora.Descricao = temp[1];
-                            entidade.Editoras.Add(editora);
-                            entidade.SaveChanges();
+                            string nome = temp[0];
+                            string descricao = temp[1];
+
+                            
+                            Editora editoraExiste = (from e in entidade.Editoras
+                                                    where e.Nome == nome
+                                                    select e).FirstOrDefault();
+
+                            if (editoraExiste == null)
+                            {
+                                Editora editora = new Editora();
+                                editora.Nome = nome;
+                                editora.Descricao = descricao;
+
+                                entidade.Editoras.Add(editora);
+                                try
+                                {
+                                    entidade.SaveChanges();
+                                }
+                                catch (Exception ex)
+                                {
+                                    Label1.Text = ex.Message;
+                                }
+                            }
                         }
                         else
                         {

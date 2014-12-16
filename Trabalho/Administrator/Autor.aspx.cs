@@ -107,22 +107,34 @@ public partial class Administrator_AdminAutor : System.Web.UI.Page
                     
                     using (var entidade = new BibliotecaEntity())
                     {
+                                              
                         foreach (var autor in autores)
                         {
-                            Autor mAutor = new Autor();
-                            mAutor.Nome = autor.Element("nome").Value;
-                            mAutor.Apelido = autor.Element("apelido").Value;
-                            entidade.Autores.Add(mAutor);
                             
+                            string nome = autor.Element("nome").Value;
+                            string apelido = autor.Element("apelido").Value;
+
+                            Autor autorExistente = (from ae in entidade.Autores
+                                                    where ae.Nome == nome && ae.Apelido == apelido
+                                                    select ae).SingleOrDefault();
+
+                            if (autorExistente == null)
+                            {
+                                Autor mAutor = new Autor();
+                                mAutor.Nome = nome;
+                                mAutor.Apelido = apelido;
+                                entidade.Autores.Add(mAutor);
+                            }                                                 
                         }
+
                         try
                         {
                             entidade.SaveChanges();
                             Response.Redirect("Autor");
                         }
-                        catch (DbEntityValidationException dbe)
+                        catch (Exception ex)
                         {
-                            Label4.Text = dbe.Message;
+                            Label4.Text = ex.Message;
                         }
                        
                     }
@@ -142,5 +154,10 @@ public partial class Administrator_AdminAutor : System.Web.UI.Page
             Label4.Text = "Ainda não importar nenhum ficheiro!";
         }
         //Response.Redirect("Autor");
+    }
+
+    private bool isAutorExiste(List<Autor> autorExistentes, string nome, string apelido)
+    {
+        return false;
     }
 }

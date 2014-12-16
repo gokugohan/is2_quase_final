@@ -72,7 +72,6 @@
                             <asp:MenuItem NavigateUrl="../Categoria" Text="Categoria"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="../Livro" Text="Livro"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="../Utilizadores" Text="Utilizadores"></asp:MenuItem>
-                            <asp:MenuItem Text=""></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="../" Text="Voltar para front end"></asp:MenuItem>
                         </Items>
                     </asp:Menu>

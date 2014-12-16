@@ -57,7 +57,7 @@
                                 <RoleGroups>
                                     <asp:RoleGroup Roles="Administrator">
                                         <ContentTemplate>
-                                            <a href="Admin/">Acesso à página administrador</a>
+                                            <a href="Admin">Acesso à página administrador</a>
                                         </ContentTemplate>
                                     </asp:RoleGroup>
                                 </RoleGroups>
@@ -83,6 +83,7 @@
                     </li>
                     <li>
                        <asp:Timer ID="Timer1" Interval="1000" OnTick="Timer1_Tick" runat="server"></asp:Timer>
+                        <asp:Timer ID="Timer2" Interval="3000" OnTick="Timer1_Tick" runat="server"></asp:Timer>
                         <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional" runat="server">
                             <ContentTemplate>
                                     <table>
@@ -117,7 +118,7 @@
                                 <Adds:WebUserControl runat="server" ID="WebUserControl" />
                             </ContentTemplate>
                             <Triggers>
-                                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                                <asp:AsyncPostBackTrigger ControlID="Timer2" EventName="Tick" />
                             </Triggers>
                         </asp:UpdatePanel>
                         

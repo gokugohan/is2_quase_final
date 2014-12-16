@@ -48,7 +48,14 @@
                     
                 </li>
             </ul>
-            
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <div id="SobreLink">
+                        <a href="~/Sobre.aspx" runat="server">Sobre trabalho</a>
+                    </div>
+                    
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

@@ -38,6 +38,19 @@
     background-color:#97310E;
 }
 
+#SobreLink{
+    line-height: 20px;
+    position: relative;  display: block;  
+    padding: 15px 15px;
+}
+#SobreLink>a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+#SobreLink:hover{
+    background-color:#97310E;
+}
 
  #animWrapper{
     display:none;

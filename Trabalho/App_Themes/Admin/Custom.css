@@ -10,3 +10,8 @@
     margin-left:10%;
     font-size:120%;
 }
+
+#Menu1 ul.static>li{
+    margin-top:10px;
+}
+
